@@ -22,7 +22,7 @@
         'views/views.xml',
         'wizard/views.xml',
     ],
-    'price': 0.0,
+    'price':  29.79,
     'currency': 'USD',
     'support': 'https://www.smartravens.com/',
     'license': 'LGPL-3',
