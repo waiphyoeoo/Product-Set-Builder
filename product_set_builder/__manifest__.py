@@ -8,7 +8,7 @@
     'sequence': 50,
     'author': 'Wai Phyo Oo',
     'website': 'https://www.smartravens.com/',
-    'images': ['static/description/product_set_components.png'],
+    'images': ['static/description/cover.png', 'static/description/product_set_components.png'],
     'description': """Product Set Builder lets you define product sets, manage their component
         quantities, and search or group inventory records by product set.
         Sales and purchase order integration requires compatible extension modules.
