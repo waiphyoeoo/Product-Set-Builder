@@ -8,7 +8,7 @@
     'sequence': 50,
     'author': 'Wai Phyo Oo',
     'website': 'https://www.smartravens.com/',
-    'images': ['static/description/add_po_3.png'],
+    'images': ['static/description/cover.png', 'static/description/add_po_3.png'],
     'description': """Extend Product Set Builder to add product set components
         to purchase orders using a quantity-based wizard.
         Requires the product_set_builder addon.
