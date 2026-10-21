@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!--    stock quant-->
+    <record id="stock_quant_search_form_view_stock_report_inherit_product_set" model="ir.ui.view">
+        <field name="name">stock.quant.search.stock.form.stock.report.inherit.product_set</field>
+        <field name="model">stock.quant</field>
+        <field name="inherit_id" ref="stock.quant_search_view"/>
+        <field name="arch" type="xml">
+            <field name="product_id" position="after">
+                <field name="product_set_id" string="Product Set"
+                       filter_domain="[('product_set_id', 'ilike', self)]"/>
+            </field>
+            <filter name="productgroup" position="after">
+                <filter string="Product Set"
+                        name="group_by_product_set_id"
+                        context="{'group_by':'product_set_id'}"/>
+            </filter>
+        </field>
+    </record>
+    <!--    stock move line-->
+    <record id="stock_move_line_search_form_view_stock_report_inherit_product_set" model="ir.ui.view">
+        <field name="name">stock.move.line.search.stock.form.stock.report.inherit.product_set</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.stock_move_line_view_search"/>
+        <field name="arch" type="xml">
+            <field name="product_id" position="after">
+                <field name="product_set_id" string="Product Set"
+                       filter_domain="[('product_set_id', 'ilike', self)]"/>
+            </field>
+            <filter name="groupby_product_id" position="after">
+                <filter string="Product Set"
+                        name="group_by_product_set_id"
+                        context="{'group_by':'product_set_id'}"/>
+            </filter>
+        </field>
+    </record>
+    <!--    stock move line-->
+    <record id="stock_move_search_form_view_stock_report_inherit_product_set" model="ir.ui.view">
+        <field name="name">stock.move.search.stock.form.stock.report.inherit.product_set</field>
+        <field name="model">stock.move</field>
+        <field name="inherit_id" ref="stock.view_move_search"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="product_set_id" string="Product Set"
+                       filter_domain="[('product_set_id', 'ilike', self)]"/>
+            </field>
+            <filter name="by_product" position="after">
+                <filter string="Product Set"
+                        name="group_by_product_set_id"
+                        context="{'group_by':'product_set_id'}"/>
+            </filter>
+        </field>
+    </record>
+    <!--    stock valuation layer-->
+    <record id="stock_valuation_search_form_view_stock_report_inherit_product_set" model="ir.ui.view">
+        <field name="name">stock.valuation.search.stock.form.stock.report.inherit.product_set</field>
+        <field name="model">stock.valuation.layer</field>
+        <field name="inherit_id" ref="stock_account.view_inventory_valuation_search"/>
+        <field name="arch" type="xml">
+            <field name="product_id" position="after">
+                <field name="product_set_id" string="Product Set"
+                       filter_domain="[('product_set_id', 'ilike', self)]"/>
+            </field>
+            <filter name="group_by_product_id" position="after">
+                <filter string="Product Set"
+                        name="group_by_product_set_id"
+                        context="{'group_by':'product_set_id'}"/>
+            </filter>
+        </field>
+    </record>
+</odoo>
